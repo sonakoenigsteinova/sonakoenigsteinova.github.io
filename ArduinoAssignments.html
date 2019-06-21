@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>So&#328;a K&ouml;nigsteinov&aacute; | HCI Portfolio</title>
+      <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -59,16 +60,20 @@
       </div>
 
 <h1>Arduino Assignments</h1>
+
+<p>All of these assignments were part of the Arduino workshop we have done as a part of our HCI class. The assignments were given to us as a PDF. There was 13 assignments in total but only the ones below are part of our portfolio.
+You can find all the assignments <a href="https://blackboard.hhs.nl/bbcswebdav/pid-2737499-dt-content-rid-22452455_2/courses/CMD-G-HCI-02-13-2018/Arduino%20Manual%20v5.0.pdf">HERE</a>.</p>
+
 <h2>3c</h2>
-<p>To make the lightbulbs shine in an alternating tact, I added another lighbulb pinMode(12, output)
+<p>The assignment was to make make the lightbulbs shine in an alternating tact. To do this, I added another lighbulb pinMode(12, output)
   into the void setup section. Then I copied the code I already had in the loop initially for 13 and
-  changed all 13s to 12. this added a step in the loop. <br><br>
+  changed all 13s to 12. This added a step in the loop. <br><br>
 
-  I have sketched a timeline first on a paper that looked like this:
+  I have sketched a timeline first on a paper to understand the follow-up of actions better.
 
-  I did this to see the events that need to happen in the loop so that everything works.
+  I needed to see the events that had to happen in the loop so that everything works and the order this happens in.
   Then I checked he syntax for these actions in the code from previous exercise and turned
-  my sketch into code.
+  my paper-sketch into a Processing code. Voila!
 </p>
 
 <div class="media">
@@ -80,10 +85,12 @@
 </div>
 
 <h2>4c</h2>
-<p>I started off by trying to do this exercise with 2 for-loops, however, I quickly realised it
-was a mistake as there was no way they could run simultaneously.
+<p>The assignment was to extend the code we have been given in the previous part of this exercise
+  and make one LED slowly fade in and at the same time the other LED fade out.
+  I started off by trying to do this exercise with 2 for-loops, however, I quickly realised it
+was a mistake as there was no way they could run simultaneously.<br><br>
 
-So I knew I only had one option: packing both lights into one for loop. I tried plenty of combinations
+I knew I only had one option: packing both lights into one for loop. I tried plenty of combinations
 before I decided to change the int brightness into x. that took away some of the confusion and helped
 me to get to the right answer. For demonstration purposes, I changed it then back to brightness. Also,
 I changed the green light bulb for red as one could see the dimming better on red.</p>
@@ -97,7 +104,12 @@ I changed the green light bulb for red as one could see the dimming better on re
 </div>
 
 <h2>6c</h2>
-<p></p>
+<p>In this exercise, we used the input from the potentiometer and the fading LEDs we have done
+  in Exercise 4. We were supposed to change the code we have been given so that one LED fades
+  in while the other fades out and vice versa, depending on the values given by the potmeter.
+Since the potmeter gives values between 0-1023, it needed to be rescaled for 0-255 as this is
+the range for controlling the LED's. I did this using sensorValue. From there on it was only
+about reusing the code from Exercise 4.</p>
 
 <div class="media">
     <video id="video-iphone" width="420" height="500" controls muted>
@@ -109,7 +121,13 @@ I changed the green light bulb for red as one could see the dimming better on re
 
 <h2>7</h2>
 
-<p></p>
+<p>This exercise was about controlling the LED's using light as an input. To get this kind of
+  input, we used the light sensors. We needed the sensors so we could dim the LEDs, which was
+  the point of the exercise. Since this assignment was very similiar to number 6, I recycled
+  the code we have been given there. One thing that needed to be done differently is the rescalling.
+  Previoulsly, we have been using a potmeter. Now we had a light sensor. We needed to scale the light
+  sensors based on the light availbale in the room. This was done using the Serial monitor and the
+  sensorValue function.</p>
 
 <div class="media">
     <video id="video-iphone" width="420" height="500" controls muted>
@@ -133,15 +151,16 @@ I changed the green light bulb for red as one could see the dimming better on re
 
 <h2>9b</h2>
 
-<p>This exercise was amazing! I loved how we had the chance to use Processing with the input from Arduino.
-It opened a whole new world of possibilities and made me think about how much more you could do with
-Arduino connected to another programme. We were given the base for the Processing code, which made
-things way easier, especially after such a long break from Processing. My change for the code was
-about using the input of the light sensor to determine the colour of the circle. I had to rescale
+<p>This exercise was amazing! We were supposed to change the Processing code to use the sensor value in an other interesting way.
+ My change for the code was about using the input of the light sensor to determine the colour of the circle. I had to rescale
 the range to 0-255 in Arduino and then just change the output code in Processing. I didn’t want the
 2nd RGB value to be the same as the first one, so I divided the number by 2. I also experimented with
 other ways how to make the 2nd RGB value different. It all worked perfectly and immediately without any
-problem.</p>
+problem. <br><br>
+I loved how we had the chance to use Processing with the input from Arduino.
+It opened a whole new world of possibilities and made me think about how much more you could do with
+Arduino connected to another programme. We were given the base for the Processing code, which made
+things way easier, especially after such a long break from Processing.</p>
 
 <div class="media">
     <video id="video-iphone" width="420" height="500" controls muted>
@@ -153,8 +172,10 @@ problem.</p>
 
 <h2>10f</h2>
 <p>This exercise looked at the first sight a bit scary but in the end turned out to be very  easy to
-  execute. I had to check the syntax online of how to make & (and) work, but I knew it was possible
-  because I have used & in a code like this before. From there, it was just simple logic and using
+  execute. It was about controlling LEDs with 2 buttons, more accurately the LED should have lighten
+  up when one button of the two buttons wass pressed, but not both. I had to check the syntax online
+  of how to make & (and) work, but I knew it was possible because I have used & in a code like this
+  before. From there, it was just simple logic and using
   the code provided. I struggled a bit at the beginning as I had one of the buttons plugged into the
   wrong pin and therefore the code didn’t work. However, once I found the mistake, everything ran
   smoothly. Sometimes I still make such stupid mistakes like forgetting a bracket and the more I code,
@@ -171,8 +192,10 @@ problem.</p>
 
 <h2>11b</h2>
 
-<p>While doing this assignment, I felt like a legit crazy person. Already after seeing the servo move
-  for the first time after uploading the code from the Arduino Manual, I got inspired and knew I had
+<p>While doing this assignment, I felt like a legit crazy person. The assignment was about changing
+  the code we have been given in a way that the servo will move in a more interesting, funny way or teach the servo a dance.
+  Naturally, I chose the dance. <br><br>
+  Already after seeing the servo move for the first time after uploading the code from the Arduino Manual, I got inspired and knew I had
   to set my goal for the dance to something like: “I need to make it move to Billie Jean by Michael
   Jackson.” I did this literally by playing around with the length of delays and the positions of the
   servo. After each try, I just uploaded the code to my Arduino board, looked at the execution and
@@ -189,9 +212,10 @@ problem.</p>
   </div>
 
 <h2>12b</h2>
-<p>This had to be for me the most difficult exercise, also because my Arduino has been going crazy
-  so I wasn’t able to check if he code was correct until I borrowed another Arduino from a friend.
-The way I if statements is just by writing it all down in sentences before I turn it into code.<br><br>
+<p>The assignment asked us to build a circuit with a servo and 2 buttons. These buttons were
+  supposed to control the servo. One button should move the servo clockwise and the other counter-clockwise.
+  First though of mine after reading the assignment was that this can be done with an if-statement. The way I create if statements is just by writing it all down in sentences before I turn it into
+code. That's what I did now, too.<br><br>
 
 If the right button is pressed, the position of the servo changes by 1 to the right. If the left
 button is pressed, the position of the servo changes by one to the left. <br><br>
@@ -209,7 +233,9 @@ code possible which works, too and it helps me to tidy up and organise my though
 </div>
 
 <h2>13b</h2>
-<p>This was the most fun of them all for me. First, I was very confused and didn’t know where to start,
+<p>For me, this was the most fun assignment of them all.  We were supposed to adjust the code so that
+  the speaker plugged into the circuit it plays a creative melody.<br><br>
+  At first, I was very confused and didn’t know where to start,
   as I can’t play any instrument and don’t understand notes and accords at all. I was literally just
   sitting there, trying out different combinations to create something new. <br><br>
 Because it all sounded pretty bad, I went to youtube and watched videos of people playing simple piano
