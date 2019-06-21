@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So&#328;a K&ouml;nigsteinov&aacute; | HCI Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <img id="banner-image" src="pics/banner.png" alt="Banner">
+
+      <div class="navbar">
+
+        <div class="dropdown">
+          <button class="dropbtn" onclick="window.location.href = 'index.html';">Home
+        </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Topics
+                <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                      <a href="Wearables.html">Wearables</a>
+                      <a href="PlayfulInteractions.html">Playful Interactions</a>
+                      <a href="ArtificialCreatures.html">Artificial Creatures</a>
+                      <a href="ARVR.html">AR & VR</a>
+
+                    </div>
+        </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Workshops
+                <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                      <a href="ArduinoAssignments.html">Arduino</a>
+                        <a href="VRAssignments.html">VR environments</a>
+                        <a href="ComputerVisionAssignments.html">Computer Vision</a>
+
+                    </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'Excursion.html';">Excursion
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Lab Weeks
+                <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                      <a href="LabWeeksProcess.html">Process</a>
+                      <a href="LabWeeksProduct.html">Product</a>
+                      <a href="LabWeeksReflect.html">Reflect</a>
+                    </div>
+              </div>
+
+      </div>
+
+<h1>Arduino Assignments</h1>
+<h2>3c</h2>
+<p>To make the lightbulbs shine in an alternating tact, I added another lighbulb pinMode(12, output)
+  into the void setup section. Then I copied the code I already had in the loop initially for 13 and
+  changed all 13s to 12. this added a step in the loop. <br><br>
+
+  I have sketched a timeline first on a paper that looked like this:
+
+  I did this to see the events that need to happen in the loop so that everything works.
+  Then I checked he syntax for these actions in the code from previous exercise and turned
+  my sketch into code.
+</p>
+
+<div class="media">
+    <video id="video-iphone" width="420" height="500" controls muted>
+        <source src="videos/3c.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/3c.png" alt="Exercise 3c">
+</div>
+
+<h2>4c</h2>
+<p>I started off by trying to do this exercise with 2 for-loops, however, I quickly realised it
+was a mistake as there was no way they could run simultaneously.
+
+So I knew I only had one option: packing both lights into one for loop. I tried plenty of combinations
+before I decided to change the int brightness into x. that took away some of the confusion and helped
+me to get to the right answer. For demonstration purposes, I changed it then back to brightness. Also,
+I changed the green light bulb for red as one could see the dimming better on red.</p>
+
+<div class="media">
+    <video id="video-iphone" width="420" height="500" controls muted>
+        <source src="videos/4c.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/4c.png" alt="Exercise 4c">
+</div>
+
+<h2>6c</h2>
+<p></p>
+
+<div class="media">
+    <video id="video-iphone" width="420" height="500" controls muted>
+        <source src="videos/6c.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/6c.png" alt="Exercise 6c">
+</div>
+
+<h2>7</h2>
+
+<p></p>
+
+<div class="media">
+    <video id="video-iphone" width="420" height="500" controls muted>
+        <source src="videos/7.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/7.png" alt="Exercise 7">
+</div>
+
+<h2>8</h2>
+
+<p></p>
+
+<div class="media">
+    <video id="video-iphone" width="420" height="500" controls muted>
+        <source src="videos/8.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/8.png" alt="Exercise 8">
+</div>
+
+<h2>9b</h2>
+
+<p>This exercise was amazing! I loved how we had the chance to use Processing with the input from Arduino.
+It opened a whole new world of possibilities and made me think about how much more you could do with
+Arduino connected to another programme. We were given the base for the Processing code, which made
+things way easier, especially after such a long break from Processing. My change for the code was
+about using the input of the light sensor to determine the colour of the circle. I had to rescale
+the range to 0-255 in Arduino and then just change the output code in Processing. I didn’t want the
+2nd RGB value to be the same as the first one, so I divided the number by 2. I also experimented with
+other ways how to make the 2nd RGB value different. It all worked perfectly and immediately without any
+problem.</p>
+
+<div class="media">
+    <video id="video-iphone" width="420" height="500" controls muted>
+        <source src="videos/9b.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/9b.png" alt="Exercise 9b">
+</div>
+
+<h2>10f</h2>
+<p>This exercise looked at the first sight a bit scary but in the end turned out to be very  easy to
+  execute. I had to check the syntax online of how to make & (and) work, but I knew it was possible
+  because I have used & in a code like this before. From there, it was just simple logic and using
+  the code provided. I struggled a bit at the beginning as I had one of the buttons plugged into the
+  wrong pin and therefore the code didn’t work. However, once I found the mistake, everything ran
+  smoothly. Sometimes I still make such stupid mistakes like forgetting a bracket and the more I code,
+  the easier it is to fix these mistake without any unnecessary frustration. This happened here, too and
+  I felt very accomplished after fixing it very quickly and making everything work.</p>
+
+<div class="media">
+  <video id="video-iphone" width="420" height="500" controls muted>
+      <source src="videos/10f.mp4" type="video/mp4">
+  </video>
+
+  <img id="screenshot" src="pics/10f.png" alt="Exercise 10f">
+</div>
+
+<h2>11b</h2>
+
+<p>While doing this assignment, I felt like a legit crazy person. Already after seeing the servo move
+  for the first time after uploading the code from the Arduino Manual, I got inspired and knew I had
+  to set my goal for the dance to something like: “I need to make it move to Billie Jean by Michael
+  Jackson.” I did this literally by playing around with the length of delays and the positions of the
+  servo. After each try, I just uploaded the code to my Arduino board, looked at the execution and
+  had Billie Jean playing in the background. Afterwards I went back to the text editor, adjust the
+  intervals and re-uploaded it to the board. I did this until I felt like it was good enough and looked
+  like a pretty good Billie Jean dance. I hope that Michael would be proud.</p>
+
+  <div class="media">
+    <video id="video-iphone" width="420" height="500" controls>
+        <source src="videos/11b.mp4" type="video/mp4">
+    </video>
+
+    <img id="screenshot" src="pics/11b.png" alt="Exercise 11b">
+  </div>
+
+<h2>12b</h2>
+<p>This had to be for me the most difficult exercise, also because my Arduino has been going crazy
+  so I wasn’t able to check if he code was correct until I borrowed another Arduino from a friend.
+The way I if statements is just by writing it all down in sentences before I turn it into code.<br><br>
+
+If the right button is pressed, the position of the servo changes by 1 to the right. If the left
+button is pressed, the position of the servo changes by one to the left. <br><br>
+
+This gave me a better idea of how to do it and what to declare. This technique is very simple and
+together with sketching, I apply it a lot when coding. It always helps me to come up with the simplest
+code possible which works, too and it helps me to tidy up and organise my thoughts.
+</p>
+<div class="media">
+  <video id="video-iphone" width="420" height="500" controls muted>
+      <source src="videos/12b.mp4" type="video/mp4">
+  </video>
+
+  <img id="screenshot" src="pics/12b.png" alt="Exercise 12b">
+</div>
+
+<h2>13b</h2>
+<p>This was the most fun of them all for me. First, I was very confused and didn’t know where to start,
+  as I can’t play any instrument and don’t understand notes and accords at all. I was literally just
+  sitting there, trying out different combinations to create something new. <br><br>
+Because it all sounded pretty bad, I went to youtube and watched videos of people playing simple piano
+music with accords. That one time I wanted to learn how to play piano, I started with a song called
+Comptine d'un Autre Été by Yann Tiersen. I didn’t manage to learn it till the end but I told myself I
+would do it at least for this assignment. I chose to recreate it according to this video:</p>
+
+<iframe id="video" width="806" height="453" src="https://www.youtube.com/embed/6f8qOdcCLm8" frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Then used the chart we were provided to translate the notes in the video into code/frequency.</p>
+
+<div class="media">
+  <video id="video-iphone" width="420" height="500" controls>
+      <source src="videos/13b.mp4" type="video/mp4">
+  </video>
+
+  <img id="screenshot" src="pics/13b.png" alt="Exercise 13b">
+</div>
+
+</body>
